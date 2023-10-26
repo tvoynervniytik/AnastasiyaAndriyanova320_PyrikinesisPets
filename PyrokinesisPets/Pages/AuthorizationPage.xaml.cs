@@ -44,6 +44,7 @@ namespace PyrokinesisPets.Pages
                 else if (currentUser.Name == "Деля")
                 {
                     MessageBox.Show("Это Деля)");
+                    NavigationService.Navigate(new DelyaViewingPage());
                 }
 
                 

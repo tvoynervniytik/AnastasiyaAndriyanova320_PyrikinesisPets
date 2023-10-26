@@ -9,6 +9,43 @@
       Title="AddPage">
 
     <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добавление фоточки" FontSize="30" Grid.Column="2" Grid.ColumnSpan="4"/>
+        <Button Content="фоточка" FontSize="16" Height="30" Grid.Column="1" Grid.Row="2" Click="Button_Click_1"/>
+        <Image x:Name="PhotoAdd" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+        <TextBlock Text="описание" Grid.Column="1" Grid.Row="5" FontSize="16" Height="30"/>
+        <TextBox x:Name="descTb" Grid.Column="2" Grid.Row="5"/>
         
+        <TextBlock Text="кто это?" FontSize="16" Height="30" Grid.Column="3" Grid.Row="5"/>
+        <ComboBox x:Name="petsCb" ItemsSource="{Binding typePets}" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="3" Margin="133,0,133,0">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Button Grid.Column="2" Grid.Row="7"
+                FontSize="25"
+                Content="Добавить в альбом" Click="Button_Click" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

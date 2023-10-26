@@ -32,31 +32,27 @@
          BorderThickness="2" 
          Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" TextChanged="SearchTb_TextChanged"/>
         
-        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+        <ListView x:Name="DelyaSlv" 
+                  Grid.Row="2" Grid.Column="1" 
+                  Grid.ColumnSpan="3" Grid.RowSpan="3"
+                  ItemsSource="{Binding alboms}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="кто это???"
-                                Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        
                         <GridViewColumn Header="фоточка"
-                                Width="150">
+                                Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <Image Source="{Binding Photo}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="описание"
-                                Width="150">
+                                Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <TextBlock Text="{Binding Description}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
