@@ -33,7 +33,7 @@ namespace PyrokinesisPets.Pages
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-            DelyaSlv.ItemsSource = new List<Albom>(DBConnection.sr.Albom.Where(i => i.Id_Pet == 0 && i.Description.StartsWith(SearchTb.Text)).ToList());
+            DelyaSlv.ItemsSource = new List<Albom>(DBConnection.sr.Albom.Where(i => i.Id_Pet == 2 && i.Description.StartsWith(SearchTb.Text)).ToList());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
