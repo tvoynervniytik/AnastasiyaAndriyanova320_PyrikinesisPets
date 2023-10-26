@@ -1,4 +1,4 @@
-﻿<Page x:Class="PyrokinesisPets.Pages.ViewingPage"
+﻿<Page x:Class="PyrokinesisPets.Pages.SharedAlbomPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PyrokinesisPets.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ViewingPage">
+      Title="SharedAlbomPage">
 
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
@@ -25,16 +25,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Text="Просмотр альбомчика" FontSize="30"
-                   VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                   Grid.Column="1" Grid.ColumnSpan="3"/>
+           VerticalAlignment="Bottom" HorizontalAlignment="Center"
+           Grid.Column="1" Grid.ColumnSpan="3"/>
         <TextBox x:Name="SearchTb" 
-                 Width="315" Height="30"
-                 BorderThickness="2" 
-                 Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" TextChanged="SearchTb_TextChanged"/>
+         Width="315" Height="30"
+         BorderThickness="2" 
+         Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" TextChanged="SearchTb_TextChanged"/>
         <ComboBox x:Name="SearchCb" 
-                  ItemsSource="{Binding typePets}"
-                  Width="100" Height="30"
-                  Grid.Column="3" Grid.Row="1" SelectionChanged="SearchCb_SelectionChanged">
+          ItemsSource="{Binding typePets}"
+          Width="100" Height="30"
+          Grid.Column="3" Grid.Row="1" SelectionChanged="SearchCb_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Name}"/>
@@ -46,7 +46,7 @@
                 <GridView>
                     <GridView.Columns>
                         <GridViewColumn Header="кто это???"
-                                        Width="150">
+                                Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding }"/>
@@ -54,7 +54,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="фоточка"
-                                        Width="150">
+                                Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding }"/>
@@ -62,7 +62,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="описание"
-                                        Width="150">
+                                Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding }"/>

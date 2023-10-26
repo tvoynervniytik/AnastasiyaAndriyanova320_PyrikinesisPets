@@ -39,13 +39,14 @@ namespace PyrokinesisPets.Pages
                 if (currentUser.Name == "Андрей")
                 {
                     MessageBox.Show("Привет, Андрей!! (тутутуту)");
+                    NavigationService.Navigate(new PiraViewingPage());
                 }
                 else if (currentUser.Name == "Деля")
                 {
                     MessageBox.Show("Это Деля)");
                 }
 
-                NavigationService.Navigate(new ViewingPage());
+                
             }
             else
                 MessageBox.Show("All's wrong");

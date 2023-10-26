@@ -17,21 +17,18 @@ using System.Windows.Shapes;
 namespace PyrokinesisPets.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ViewingPage.xaml
+    /// Логика взаимодействия для PiraViewingPage.xaml
     /// </summary>
-    public partial class ViewingPage : Page
+    public partial class PiraViewingPage : Page
     {
-        public static List<Albom> alboms {  get; set; }
-        public static List<Administrator> administrators { get; set; }
+        public static List<Albom> alboms { get; set; }
         public static List<TypePets> typePets { get; set; }
-        public ViewingPage()
+        public PiraViewingPage()
         {
             InitializeComponent();
 
             alboms = new List<Albom>(DBConnection.sr.Albom.ToList());
             typePets = new List<TypePets>(DBConnection.sr.TypePets.ToList());
-            administrators = new List<Administrator>(DBConnection.sr.Administrator.ToList());
-            Administrator currentUser = administrators.FirstOrDefault();
             this.DataContext = this;
         }
 

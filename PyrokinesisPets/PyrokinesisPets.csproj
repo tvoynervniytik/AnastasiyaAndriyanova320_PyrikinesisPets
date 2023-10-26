@@ -108,6 +108,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\DelyaViewingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PiraViewingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SharedAlbomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ViewingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +128,15 @@
   <ItemGroup>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DelyaViewingPage.xaml.cs">
+      <DependentUpon>DelyaViewingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PiraViewingPage.xaml.cs">
+      <DependentUpon>PiraViewingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SharedAlbomPage.xaml.cs">
+      <DependentUpon>SharedAlbomPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ViewingPage.xaml.cs">
       <DependentUpon>ViewingPage.xaml</DependentUpon>
