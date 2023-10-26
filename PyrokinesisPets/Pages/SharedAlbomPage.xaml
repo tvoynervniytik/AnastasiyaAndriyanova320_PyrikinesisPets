@@ -41,7 +41,9 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+        <ListView x:Name="sharedalbSlv"
+                  ItemsSource="{Binding alboms}"
+            Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -49,7 +51,7 @@
                                 Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <TextBlock Text="{Binding TypePets.Name}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -57,7 +59,7 @@
                                 Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <Image Source="{Binding Photo}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -65,7 +67,7 @@
                                 Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <TextBlock Text="{Binding Discription}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

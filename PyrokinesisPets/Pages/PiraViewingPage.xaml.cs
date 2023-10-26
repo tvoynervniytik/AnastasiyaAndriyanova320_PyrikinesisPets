@@ -41,5 +41,10 @@ namespace PyrokinesisPets.Pages
         {
             NavigationService.Navigate(new Pages.AddPage());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.SharedAlbomPage());
+        }
     }
 }
