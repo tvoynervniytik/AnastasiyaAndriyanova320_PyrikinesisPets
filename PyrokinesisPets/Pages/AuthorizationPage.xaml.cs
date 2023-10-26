@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PyrokinesisPets.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace PyrokinesisPets.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
+        public static List<Administrator> administrators {  get; set; }
         public AuthorizationPage()
         {
             InitializeComponent();
@@ -27,7 +29,26 @@ namespace PyrokinesisPets.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string login = loginTb.Text.Trim();
+            string password = passwordTb.Password.Trim();
 
+            administrators = new List<Administrator>(DBConnection.sr.Administrator.ToList());
+            Administrator currentUser = administrators.FirstOrDefault(i => i.Login == login && i.Password == password);
+            if (currentUser != null)
+            {
+                if (currentUser.Name == "Андрей")
+                {
+                    MessageBox.Show("Привет, Андрей!! (тутутуту)");
+                }
+                else if (currentUser.Name == "Деля")
+                {
+                    MessageBox.Show("Это Деля)");
+                }
+
+                NavigationService.Navigate(new ViewingPage());
+            }
+            else
+                MessageBox.Show("All's wrong");
         }
     }
 }
