@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace PyrokinesisPets.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для SharedAlbomPage.xaml
+    /// Логика взаимодействия для AddPage.xaml
     /// </summary>
-    public partial class SharedAlbomPage : Page
+    public partial class AddPage : Page
     {
-        public SharedAlbomPage()
+        public AddPage()
         {
             InitializeComponent();
-        }
-
-        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void SearchCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

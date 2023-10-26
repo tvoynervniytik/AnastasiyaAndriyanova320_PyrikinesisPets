@@ -28,44 +28,29 @@
                VerticalAlignment="Bottom" HorizontalAlignment="Center"
                Grid.Column="1" Grid.ColumnSpan="3"/>
         <TextBox x:Name="SearchTb" 
-             Width="315" Height="30"
-             BorderThickness="2" 
-             Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" TextChanged="SearchTb_TextChanged"/>
-        <ComboBox x:Name="SearchCb" 
-              ItemsSource="{Binding typePets}"
-              Width="100" Height="30"
-              Grid.Column="3" Grid.Row="1" SelectionChanged="SearchCb_SelectionChanged">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}"/>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                 Width="315" Height="30"
+                 BorderThickness="2" 
+                 Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" TextChanged="SearchTb_TextChanged"/>
+
+        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3"
+                  x:Name="PiraSlv"
+                  ItemsSource="{Binding alboms}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="кто это???"
-                                    Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
                         <GridViewColumn Header="фоточка"
-                                    Width="150">
+                                    Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <Image Source="{Binding Photo}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Header="описание"
-                                    Width="150">
+                                        Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding }"/>
+                                    <TextBlock Text="{Binding Description}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -73,5 +58,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Content="Добавить" 
+                Height="30"
+                FontSize="23"
+                Grid.Column="2" Grid.Row="5" Click="Button_Click"/>
     </Grid>
 </Page>

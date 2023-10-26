@@ -24,5 +24,15 @@ namespace PyrokinesisPets.Pages
         {
             InitializeComponent();
         }
+
+        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddPage());
+        }
     }
 }

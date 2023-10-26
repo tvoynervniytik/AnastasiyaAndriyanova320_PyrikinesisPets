@@ -34,12 +34,12 @@ namespace PyrokinesisPets.Pages
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+           PiraSlv.ItemsSource = new List<Albom>(DBConnection.sr.Albom.Where(i => i.Id_Pet == 1 && i.Description.StartsWith(SearchTb.Text)).ToList());
         }
 
-        private void SearchCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Pages.AddPage());
         }
     }
 }
